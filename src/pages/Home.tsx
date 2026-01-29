@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-function Pill({ children }: { children: React.ReactNode }) {
-  return (
-    <span className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm">
-      {children}
-    </span>
-  );
-}
+// function Pill({ children }: { children: React.ReactNode }) {
+//   return (
+//     <span className="inline-flex items-center rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-medium text-slate-700 shadow-sm">
+//       {children}
+//     </span>
+//   );
+// }
 
 function Card({
   title,
