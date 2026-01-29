@@ -23,31 +23,31 @@ function NavItem({ to, children }: { to: string; children: React.ReactNode }) {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-dvh bg-white text-slate-900">
-<header className="
-  sticky top-0 z-50
-  border-b border-slate-200
-  bg-gradient-to-b from-slate-50/95 to-white/85
-  backdrop-blur
-">
+      <header
+        className={[
+          "sticky top-0 z-50",
+          "border-b border-slate-200",
+          "bg-gradient-to-b from-slate-50/95 to-white/85",
+          "backdrop-blur",
+        ].join(" ")}
+      >
         <Container>
-          <div className="flex h-36 items-center justify-between">
-            <Link to="/" className="flex items-center gap-3">
-                <img
+          <div className="flex h-36 items-center justify-between gap-6">
+            <Link to="/" className="flex items-center">
+              <img
                 src="/images/fvgfs-logo.png"
                 alt="Fountain Valley Girls Fastpitch Softball"
-                className="
-                    h-20
-                    sm:h-24
-                    md:h-28
-                    lg:h-52
-                    w-auto
-                    drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]
-                "
-                />
-
+                className={[
+                  "h-20 w-auto",
+                  "sm:h-24",
+                  "md:h-28",
+                  "lg:h-36",
+                  "drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]",
+                ].join(" ")}
+              />
             </Link>
 
-            <nav className="hidden items-center gap-6 md:flex">
+            <nav className="hidden items-center gap-5 md:flex">
               <NavItem to="/registration">Registration</NavItem>
               <NavItem to="/schedule">Schedule</NavItem>
               <NavItem to="/news">News</NavItem>
@@ -73,7 +73,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <footer className="mt-20 border-t border-slate-200 bg-slate-50">
         <Container>
-          <div className="py-10 grid gap-8 md:grid-cols-3">
+          <div className="grid gap-8 py-10 md:grid-cols-3">
             <div>
               <div className="text-sm font-semibold">FV Softball</div>
               <p className="mt-2 text-sm text-slate-600">
@@ -83,9 +83,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div>
               <div className="text-sm font-semibold">Quick Links</div>
               <ul className="mt-2 space-y-2 text-sm">
-                <li><Link className="text-slate-600 hover:text-slate-900" to="/registration">Registration</Link></li>
-                <li><Link className="text-slate-600 hover:text-slate-900" to="/schedule">Schedule</Link></li>
-                <li><Link className="text-slate-600 hover:text-slate-900" to="/sponsors">Sponsors</Link></li>
+                <li>
+                  <Link className="text-slate-600 hover:text-slate-900" to="/registration">
+                    Registration
+                  </Link>
+                </li>
+                <li>
+                  <Link className="text-slate-600 hover:text-slate-900" to="/schedule">
+                    Schedule
+                  </Link>
+                </li>
+                <li>
+                  <Link className="text-slate-600 hover:text-slate-900" to="/sponsors">
+                    Sponsors
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
@@ -101,6 +113,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </Link>
             </div>
           </div>
+
           <div className="border-t border-slate-200 py-6 text-xs text-slate-500">
             © {new Date().getFullYear()} FV Softball. All rights reserved.
           </div>
