@@ -32,6 +32,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <Container>
           <div className="flex h-36 items-center justify-between">
             <Link to="/" className="flex items-center gap-3">
+<<<<<<< HEAD
                 <img
                 src="/images/fvgfs-logo.png"
                 alt="Fountain Valley Girls Fastpitch Softball"
@@ -45,6 +46,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 "
                 />
 
+=======
+              <img
+                src="/images/fvgfs-logo.png"
+                alt="Fountain Valley Girls Fastpitch Softball"
+                className="
+                  h-20
+                  sm:h-24
+                  md:h-28
+                  lg:h-52
+                  w-auto
+                  drop-shadow-[0_2px_6px_rgba(0,0,0,0.15)]
+                "
+              />
+>>>>>>> b03a00a5b93404abb71d070da0e4e55700c58f81
             </Link>
 
             <nav className="hidden items-center gap-6 md:flex">
